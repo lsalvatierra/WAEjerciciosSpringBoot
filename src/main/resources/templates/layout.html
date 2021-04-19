@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<script type="text/javascript"
+	th:href="@{/script/jquery/jQuery_v3.6.0.js}"></script>
+<script type="text/javascript"
+	th:href="@{/script/bootstrap/bootstrap.js}"></script>
+<link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.css}">
+</head>
+<body>
+<nav th:fragment="menu" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">IDAT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/calculoimc}">Calculadora IMC</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/promedionotas}">Promedio del Curso</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/Producto/formVentaProducto}">Venta Producto</a>
+      </li>      
+    </ul>
+  </div>
+</nav>
+</body>
+</html>
