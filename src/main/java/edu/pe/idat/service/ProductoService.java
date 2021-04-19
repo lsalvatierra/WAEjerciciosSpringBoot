@@ -45,7 +45,7 @@ public class ProductoService implements ProductoRepository {
 							);
 					nuevoActualizado = true; agregarNuevo = false;
 				}else {
-					nuevaListVentaProducto.add(objVentaProd);
+					nuevaListVentaProducto.add(objVenta);
 					if(nuevoActualizado) {
 						agregarNuevo = false;
 					}else

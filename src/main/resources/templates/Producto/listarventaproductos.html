@@ -5,5 +5,23 @@
 </head>
 <body>
 <nav th:replace="layout::menu" ></nav>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="producto :${lstventaproducto}">
+      <td th:text="${producto.codProducto}"></td>
+      <td th:text="${producto.nomProducto}"></td>
+      <td th:text="${producto.cantidadTotal}"></td>
+      <td th:text="${producto.precioTotal}"></td>
+    </tr>
+  </tbody>
+</table>
 </body>
 </html>
